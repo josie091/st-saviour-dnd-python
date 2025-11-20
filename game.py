@@ -24,6 +24,7 @@ if __name__ == '__main__':
 
     print_dramatic_text('Welcome to Josies trivia game!!')
 
+    # the player has 5 lives
     lives = 5
     answer = input('Question 1: What is the slowest animal on the Earth?\n')
     if answer.lower() == 'slug':
@@ -71,6 +72,13 @@ if __name__ == '__main__':
         check_player_alive(lives)
 
     # add more questions?
+    answer = input('Question 5: If you could have any superpower, would you choose invisibility?')
+    if answer.lower() == 'yes': 
+        print_dramatic_text ('Correct!!!')
+    else: 
+        print_dramatic_text('How could you say anything other than yes?? :(')
+        lives -= 2
+        check_player_alive(lives)
 
     print_dramatic_text('Congrats you finished the game !! :( ')
  
